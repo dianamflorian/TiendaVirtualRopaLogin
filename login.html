@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  </head>
+  <body>
+    <br>
+    <h1>Login</h1>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+                <form name="frm" role="form">
+
+                    <div class="form-group">
+                        <label for="exampleInputName1">
+                            Nombre
+                        </label>
+                        <input type="nombre" name="nombre" class="form-control" id="exampleInputName1" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">
+                            Correo
+                        </label>
+                        <input type="email" name="correo" class="form-control" id="exampleInputEmail1" />
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">
+                            Contraseña
+                        </label>
+                        <input type="password" name="contraseña" class="form-control" id="exampleInputPassword1"/>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" onclick="login()">
+                        Ingresar
+                    </button>
+
+                </form>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+    </div>
+<script>
+    function login(){
+        console.log("Iniciando sesion...")
+        const nombre= document.frm.nombre.value //agregue esto por mi cuenta
+        const correo = document.frm.correo.value
+        const contraseña = document.frm.contraseña.value
+        console.log(nombre + "," + correo + "," + contraseña)
+        const usuario = {
+            "nombre": nombre, //agregue esto por mi cuenta
+            "correo": correo,
+            "contraseña": contraseña
+        }
+        options = {
+            method : "POST",
+            body : usuario
+        }
+        fetch("http://localhost:9011/usuarios/login",options)
+        .then(response => {
+           if(response == "ok"){
+               alert("Bienvenido")
+           }else{
+            alert("Datos de usuario incorrectos")
+          }
+        })
+    }
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  </body>
+</html>
