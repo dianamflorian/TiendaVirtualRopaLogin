@@ -1,0 +1,40 @@
+.navbar {
+  background: rgba(180, 174, 180, 0.336);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  /*border-radius: 10px;*/
+  border-radius: 0 0 30px;
+}
+
+.navbar-expand a {
+  color:rgba(53, 50, 50, 0.753);
+  transition: color .15s ease-in-out;
+}
+.navbar-expand a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.card {
+    width: 280px;
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: #fff;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+    overflow: hidden
+  }
+  
+  .card .backgroundEffect {
+    bottom: 0;
+    height: 0px;
+    width: auto
+  }
+  
+  .card:hover {
+  
+    transform: scale(1.025);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px
+  }
+  

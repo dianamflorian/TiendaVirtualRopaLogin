@@ -5,21 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>T-SHIRT SHOP - Pagina principal</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link href="estilo.css" rel="stylesheet">
-
+    <link href="camisetas.css" rel="stylesheet">
     <style type="text/css">
-      body { background-image: linear-gradient(to right bottom, #ffffff, #fbfbfc, #f7f8fa, #f3f4f7, #eef1f4, #eef1f4, #eef1f4, #eef1f4, #f3f4f7, #f7f8fa, #fbfbfc, #ffffff);}
+      body { background:url(./images/fonini.jpg)}
       </style>
   
-
-
   </head>
-
   <body>
-
-    <nav class="navbar navbar-expand-lg sticky-top py-1">
+    <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">T-SHIRT SHOP</a>
+          <a class="navbar-brand" href="#">T-SHIRT SHOP</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -43,7 +38,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled">Acerca de</a>
+                <a class="nav-link disabled">Disabled</a>
               </li>
             </ul>
            <!--- <form class="d-flex" role="search">
@@ -53,24 +48,18 @@
           </div>
         </div>
       </nav>
-
-      <!--<div class="fondo">
-        <img src="./images/fonini.jpg" width="1700px">
-      </div>-->
-      
       <br>
-    <h1>Bienvenido a nuestra tienda virtual de camisetas</h1>
+    <h1>Categorias</h1>
     <br>
-    <h5>Esta es nuestra pagina principal, aqui encontrara el listado de camisetas.</h5>
+    <h5>Aqui puedes encontrar las categorias para elegir rapido y facil tu producto.</h5>
     <br><!--El br es para que no queden pegadas las tarjetas-->
     <div class="container">
-        <div class="row" id="productos">
+        <div class="row" id="categorias">
         <div class = "col-3">
-            <div class="card" style="width: 18rem;">
-        <img src="./images/1.jpg" class="card-img-top" alt="camiseta a">
+            <div class="card text-center" style="width: 22rem;">
+        <img src="./images/imgcamisetas/1.jpg" class="card-img-top" alt="camiseta a">
         <div class="card-body">
-          <h5 class="card-title">Nombre - $0000</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h5 class="card-title" href="index.html"> Nombre </h5>
          <!-- <a href="#" class="btn btn-primary">Go somewhere</a>-->
         </div>
       </div>
@@ -80,43 +69,26 @@
 
     <script>
         console.log("Hola mundo")
-    fetch("http://localhost:9011/productos")
+    fetch("http://localhost:9011/categorias")
     .then(response => response.json())
     .then(data => {console.log(data)
     let codigo = ""
     data.forEach(element => {
         codigo += ' <div class = "col-3">'
-        codigo += ' <div class="card">'
-        codigo += ' <img src="./images/'+element.id+'.jpg" <class="card-img-top" style="width: 17rem;">'
-        codigo += ' <div class="card-body" style="width: 18rem;">'
-        codigo += ' <h5 class="card-title">'+ element.nombre +' - $'+element.precio+'</h5>'
-        codigo += ' <p class="card-text">'+element.descripcion+'.</p>'
+        codigo += ' <div class="card text-center" style="width: 18rem;">'//le añadi text-center para que quedara centrada el nombre y la descripcion
+        codigo += ' <img src="./images/imgcamisetas/'+element.id+'.jpg" class="card-img-top" alt="...">'
+        codigo += ' <div class="card-body">'
+        codigo += ' <a href="index.html"><h5>'+ element.nombre +'</h5></a>'
         codigo += ' </div>'
         codigo += ' </div>'
         codigo += ' </div>'
     });
-    document.getElementById('productos').innerHTML = codigo
-    
+    document.getElementById('categorias').innerHTML = codigo
+
  })
+
+
  </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
-
-
- <figure class="text-end">
-  <blockquote class="blockquote">
-    <p>A well-known quote, contained in a blockquote element.</p>
-  </blockquote>
-  <figcaption class="blockquote-footer">
-    Someone famous in <cite title="Source Title">Source Title</cite>
-  </figcaption>
-</figure>
   </body>
 </html>

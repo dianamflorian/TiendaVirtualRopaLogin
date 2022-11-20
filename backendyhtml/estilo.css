@@ -1,0 +1,44 @@
+
+.navbar {
+    background: rgba(255, 253, 253, 0.822);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    /*border-radius: 10px;*/
+    border-radius: 0 0 30px;
+  }
+
+.navbar-expand a {
+    color:rgba(243, 243, 243, 0.952);
+    transition: color .15s ease-in-out;
+    text-decoration: overline;
+  }
+.navbar-expand a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+
+.card{
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border-radius: 0 30px;
+  }
+    
+.card:hover{
+    box-shadow: 5px 6px 6px 2px #fcfcfce5;
+    transform: scale(1.1);
+    border-radius: 0 30px;
+    opacity: 5px;
+}  
+
+.card-body:hover{
+  background-image: linear-gradient(to right bottom, #ffffff, #fbfbfc, #f7f8fa, #f3f4f7, #eef1f4, #eef1f4, #eef1f4, #eef1f4, #f3f4f7, #f7f8fa, #fbfbfc, #ffffff);
+  border-radius: 0 30px;
+  opacity: 5px;
+}
+
+
+
+.body{
+  background-image: linear-gradient(to right top, #ac94ae, #cbaab2, #dcc5be, #e8e1d8, #fafbf8);
+}
+
