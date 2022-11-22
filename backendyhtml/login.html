@@ -5,9 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    
     <style type="text/css">
-    body { background:url(./images/fonlogin.jpg)}
+    body { background-image: linear-gradient(
+  220deg,
+  hsl(325deg 92% 95%) 1%,
+  hsl(334deg 71% 87%) 42%,
+  hsl(341deg 68% 79%) 49%,
+  hsl(348deg 65% 70%) 51%,
+  hsl(353deg 60% 61%) 51%,
+  hsl(358deg 54% 51%) 50%,
+  hsl(358deg 48% 43%) 49%,
+  hsl(358deg 43% 36%) 49%,
+  hsl(358deg 36% 28%) 51%,
+  hsl(359deg 26% 20%) 58%,
+  hsl(0deg 6% 13%) 99%
+);}
     </style>
 
 </head>
@@ -54,10 +66,10 @@
     <br>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
             </div>
             <div class="col-md-4">
-                <form name="frm" role="form">
+                <form role="form" class="form-inline">
 
                     <div class="form-group">
                         <label for="exampleInputName1">
@@ -103,6 +115,7 @@
             </div>
         </div>
     </div>
+
 <script>
     function login(){
         console.log("Iniciando sesion...")

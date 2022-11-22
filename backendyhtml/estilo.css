@@ -1,6 +1,6 @@
 
 .navbar {
-    background: rgba(255, 253, 253, 0.822);
+    background: rgba(252, 250, 250, 0.932);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
     /*border-radius: 10px;*/
@@ -8,7 +8,7 @@
   }
 
 .navbar-expand a {
-    color:rgba(243, 243, 243, 0.952);
+    color:rgba(243, 243, 243, 0.836);
     transition: color .15s ease-in-out;
     text-decoration: overline;
   }
@@ -16,6 +16,7 @@
     color: #fff;
     text-decoration: none;
   }
+
 
 .card{
     transition: all 0.2s ease;
@@ -35,10 +36,3 @@
   border-radius: 0 30px;
   opacity: 5px;
 }
-
-
-
-.body{
-  background-image: linear-gradient(to right top, #ac94ae, #cbaab2, #dcc5be, #e8e1d8, #fafbf8);
-}
-
