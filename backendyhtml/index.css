@@ -1,7 +1,4 @@
-@import 'animate.css';
-@import 'compass/css3';
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:300);
-@import "jquery";
 
 body {
     margin: 0;

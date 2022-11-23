@@ -1,33 +1,46 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <style type="text/css">
-    body { background-image: linear-gradient(
-  220deg,
-  hsl(325deg 92% 95%) 1%,
-  hsl(334deg 71% 87%) 42%,
-  hsl(341deg 68% 79%) 49%,
-  hsl(348deg 65% 70%) 51%,
-  hsl(353deg 60% 61%) 51%,
-  hsl(358deg 54% 51%) 50%,
-  hsl(358deg 48% 43%) 49%,
-  hsl(358deg 43% 36%) 49%,
-  hsl(358deg 36% 28%) 51%,
-  hsl(359deg 26% 20%) 58%,
-  hsl(0deg 6% 13%) 99%
-);}
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="navmenu.js">
+  <link rel="stylesheet" type="text/css" href="index.css">
+	<!-- Libraries -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
 
 </head>
 
   <body>
+
+    <header>
+      <input type="checkbox" id="btn-menu" />
+      <label for="btn-menu"><i class="fa fa-bars"></i></label>
+      <nav class="menu">
+        <ul>
+        <li><a href="index.html">T-SHIRT SHOP</a></li>
+        <li ><a href="index.html">Inicio</a></li>
+        <li class="marca"><a href="login.html">Login</a></li>
+        <li class="submenu"><a href="#">Categorias<i class="fa fa-caret-left"></i></a>
+          <ul>
+              <li><a href="camisetas.html">Camisetas</a></li>
+              <!--<li><a href="#">Pantalones</a></li>
+              <li><a href="#">Vestidos</a></li>-->
+            </ul>
+        </li>
+      </nav>
+    </header>
+    <br>
+
+
+    <!---
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">T-SHIRT SHOP</a>
+          <a class="navbar-brand" href="index.html">T-SHIRT SHOP</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -40,36 +53,36 @@
                 <a class="nav-link" href="login.html">Login</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Categorias
-                </a>
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorias</a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="camisetas.html">Camisetas</a></li>
                   <li><a class="dropdown-item" href="#">Another action</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-              </li>
             </ul>
-           <!--- <form class="d-flex" role="search">
+           <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Buscar</button>
-            </form>-->
+            </form>
           </div>
         </div>
-      </nav>
+      </nav>-->
     <br>
-    <h1>Login</h1>
+
+    <div class="fondo_p">
+      <div class="container "><!--Agregado por mi cuenta-->
+      <h1>Login</h1>
+      <p></p>
+      </div>
+
     <br>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-md-3">
             </div>
             <div class="col-md-4">
-                <form role="form" class="form-inline">
+                <form role="form" class="form">
 
                     <div class="form-group">
                         <label for="exampleInputName1">
@@ -106,7 +119,7 @@
 
                 </form>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Eres nuevo aqui? Registrarme</a>
+                <a class="dropdown-item" href="#">Registrarme</a>
                 <a class="dropdown-item" href="#">Olvidaste tu contraseña?</a>
               </div>
 
@@ -119,12 +132,12 @@
 <script>
     function login(){
         console.log("Iniciando sesion...")
-        const nombre= document.frm.nombre.value //agregue esto por mi cuenta
+        //const nombre= document.frm.nombre.value //agregue esto por mi cuenta
         const correo = document.frm.correo.value
         const contraseña = document.frm.contraseña.value
         console.log(nombre + "," + correo + "," + contraseña)
         const usuario = {
-            "nombre": nombre, //agregue esto por mi cuenta
+            //"nombre": nombre, //agregue esto por mi cuenta
             "correo": correo,
             "contraseña": contraseña
         }
@@ -142,6 +155,8 @@
         })
     }
 </script>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   </body>
 </html>
