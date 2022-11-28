@@ -6,7 +6,7 @@
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="navmenu.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="index.css">
 	<!-- Libraries -->
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
@@ -36,40 +36,6 @@
     </header>
     <br>
 
-
-    <!---
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">T-SHIRT SHOP</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="login.html">Login</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorias</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="camisetas.html">Camisetas</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-            </ul>
-           <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Buscar</button>
-            </form>
-          </div>
-        </div>
-      </nav>-->
-    <br>
-
     <div class="fondo_p">
       <div class="container "><!--Agregado por mi cuenta-->
       <h1>Login</h1>
@@ -79,84 +45,151 @@
     <br>
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
-            </div>
+            <div class="col-md-12">
+              <div class="row">
+            
             <div class="col-md-4">
-                <form role="form" class="form">
+              </div>
+              <div class="col-md-4">
+                <form name="frm" role="form" class="form-group">
 
-                    <div class="form-group">
+                    <!--<div class="form-group">
                         <label for="exampleInputName1">
                             Nombre
                         </label>
                         <input type="nombre" name="nombre" class="form-control" id="exampleInputName1" placeholder="Susan" />
-                    </div>
+                    </div>-->
 
                     <div class="form-group">
-                        <label for="exampleInputEmail1">
+                        <label frm="correo">
                             Correo electronico
                         </label>
-                        <input type="email" name="correo" class="form-control" id="exampleInputEmail1" placeholder="correo@.com" />
+                        <input type="email" name="correo" class="form-control" id="correo" placeholder="correo" />
                     </div>
                     
                     <div class="form-group">
-                        <label for="exampleInputPassword1">
-                            Contraseña
+                        <label frm="contrasena">
+                            Contrasena
                         </label>
-                        <input type="password" name="contraseña" class="form-control" id="exampleInputPassword1" placeholder="*********"/>
+                        <input type="password" name="contrasena" class="form-control" id="contrasena" placeholder="*********"/>
                     </div>
                     <div class="mb-3">
                         <div class="form-check">
                           <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                          <label class="form-check-label" for="dropdownCheck">
-                            Recordarme
-                          </label>
+                          <label class="form-check-label" for="dropdownCheck">Recordarme</label>
                         </div>
                       </div>
 
-                    <button type="submit" class="btn btn-primary" onclick="login()">
-                        Ingresar
-                    </button>
+                    <button type="button" class="btn btn-primary" onClick="login()">Ingresar</button>
 
-                </form>
+                <!--</form>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Registrarme</a>
-                <a class="dropdown-item" href="#">Olvidaste tu contraseña?</a>
+                <a class="dropdown-item" href="#">Olvidaste tu contrasena?</a>
               </div>
 
             </div>
             <div class="col-md-4">
-            </div>
+            </div>-->
         </div>
-    </div>
+      </div>
 
+    </div>
+     
+        <!---
 <script>
     function login(){
-        console.log("Iniciando sesion...")
+        console.log("Logueando")
         //const nombre= document.frm.nombre.value //agregue esto por mi cuenta
-        const correo = document.frm.correo.value
-        const contraseña = document.frm.contraseña.value
-        console.log(nombre + "," + correo + "," + contraseña)
-        const usuario = {
+        let correo = document.frm.correo.value
+        let contrasena = document.frm.contrasena.value
+        console.log(correo + "," + contrasena)
+
+        let usuario = {
             //"nombre": nombre, //agregue esto por mi cuenta
-            "correo": correo,
-            "contraseña": contraseña
+            'nombre': "",
+            'correo': correo,
+            'contrasena': contrasena
         }
-        options = {
+        console.log(usuario)
+        options= {
             method : "POST",
-            body : usuario
+            body : JSON.stringify(usuario),
+        headers: {
+              'Content-type': 'application/json;charset=UTF-8',
+              'Accept':'application/json'
         }
-        fetch("http://localhost:9011/usuarios/login",options)
-        .then(response => {
-           if(response == "ok"){
-               alert("Bienvenido")
+        }
+        url='http://localhost:9011/usuarios/login'
+        fetch(url,options)
+        .then(response => response.json())
+        .then(data => { console.log(data.msj)
+           if(data.msj == "ok"){
+            alert("Bienvenido")
+               console.log("datos correctos")
+              document.location = "panel.html"
+              
            }else{
             alert("Datos de usuario incorrectos")
           }
         })
-    }
+        const promise = fetch('http://localhost:9011/usuarios/login', options);
+const timeoutId = setTimeout(() => controller.abort(), 3000);
+
+promise
+  .then(response => {/* handle the response */})
+  .catch(error => console.error('timeout exceeded'))
+        
+  .catch(error => console.log("error"+ error))
+    };
+</script>
+-->
+
+<script>
+  function login(){
+      console.log("logueando")
+      
+      
+      //const nombre= document.frm.nombre.value //agregue esto por mi cuenta
+      let correo = document.frm.correo.value
+      let contrasena = document.frm.contrasena.value
+      console.log(correo + "," + contrasena)
+      
+      
+      let usuario = {
+          //"nombre": nombre, //agregue esto por mi cuenta
+          'nombre': "",
+          'correo': correo,
+          'contrasena': contrasena
+      }
+    
+      console.log(usuario)
+      options= {
+          method : 'POST',
+          body : JSON.stringify(usuario),
+      
+      headers: {
+            'Content-type': 'application/json'
+      }
+      }
+      let url='http://localhost:9011/usuarios/login'
+      fetch(url,options)
+      .then(response => { console.log(response)
+         if(response.ok){
+             alert("Bienvenido")
+             console.log("datos correctos")
+              document.location = "panel.html"
+
+         }else{
+          alert("Datos de usuario incorrectos")
+
+        }
+      })
+      .catch(error => console.log("error"+ error))
+  }
+
 </script>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   </body>
 </html>
